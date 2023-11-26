@@ -761,8 +761,39 @@ footer .social-icons li {
 	margin: 0px 3px;
 }
 
+<<<<<<< HEAD
 
 
+=======
+footer .social-icons li a {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	line-height: 80px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	background-color: #364a59;
+	transition: all 0.5s;
+}
+
+footer .social-icons li a:hover {
+	background-color: #ffe165;
+	color: #1f3646;
+}
+
+footer p {
+	color: #fff;
+	font-size: 12px;
+	margin-top: 40px; 	
+}
+
+footer p em {
+	font-style: normal;
+	font-weight: 700;
+	color: #ffe165;
+}
+>>>>>>> a8db9528e1d97384846452b105f7d28b5df792e5
 
 
 
