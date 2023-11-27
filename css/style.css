@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
 .titu{
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -13,7 +10,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 	margin-bottom: 2rem;
 }
->>>>>>> a8db9528e1d97384846452b105f7d28b5df792e5
+
 /* Estilo para el contenedor principal */
 .containe {
     display: flex;
@@ -34,9 +31,10 @@
     width: 50%; /* Ajusta el ancho del contenedor de texto según sea necesario */
     font-size: 16px;
     text-align: justify;
-    margin-left: 45px;
+    margin-left: 70px;
     margin-right: 50px;
-}.contain{
+}
+.contain{
     text-align: center;
     margin-bottom: 35px;
 

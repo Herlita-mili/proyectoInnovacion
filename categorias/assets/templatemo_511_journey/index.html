@@ -21,340 +21,344 @@
     <!-- Incluir Font Awesome desde CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <style> 
-        .yy-main-header {
-            background-color: #1493bf; /* Color de fondo de la barra de navegación */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0;
-        }
+<style> 
+    .yy-main-header {
+        background-color: #1493bf; /* Color de fondo de la barra de navegación */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .yy-logo-wrap img {
+        max-width: 160px;
+        height: auto;
+        display: block; /* Asegúrate de que la imagen se muestre como bloque */
+        margin: 0 auto; /* Centra la imagen si es más pequeña que el contenedor */
+    }
+    
+    
+    .yy-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center; 
         
-        .yy-logo-wrap img {
-            max-width: 160px;
-            height: auto;
-            display: block; /* Asegúrate de que la imagen se muestre como bloque */
-            margin: 0 auto; /* Centra la imagen si es más pequeña que el contenedor */
-        }
-        
-        
-        .yy-menu-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center; 
-            
-            margin-right: 70px;
-        }
-        
-        .yy-menu-list a, .yy-menu-list li {
-            text-decoration: none;
-            color: white; /* Color del texto de los enlaces */
-            font-weight: bold;
-            padding: 10px 15px;
-        }
-        
-        .yy-menu-parent {
-            position: relative;
-            cursor: pointer; /* Cambia el cursor para indicar que es desplegable */
-        }
-        
-        .yy-menu-parent::after {
-            content: "";
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            display: inline-block;
-            padding: 3px;
-            margin-left: 10px;
-            position: absolute;
-            right: 0; /* Alinea la flecha hacia la derecha */
-            top: 50%; /* Alinea la flecha verticalmente */
-            transform: translateY(-50%) rotate(45deg); /* Centra y rota la flecha */
-        }
-        
-        .yy-menu-list > .yy-menu-parent:hover .yy-sub-menu {
-            display: block; /* Muestra el menú desplegable al pasar el mouse */
-        }
-        
-        .yy-sub-menu {
-            display: none; /* Oculta el menú desplegable por defecto */
-            position: absolute;
-            background-color: #1493bf; /* Color de fondo del menú desplegable */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para el menú desplegable */
-            padding: 12px 16px; /* Espaciado dentro del menú desplegable */
-            z-index: 200; /* Incrementa el z-index para asegurar que esté por encima de otros elementos */
-            margin-top: .5em; /* Espacio para la sombra */
-        }
-        
+        margin-right: 70px;
+    }
+    
+    .yy-menu-list a, .yy-menu-list li {
+        text-decoration: none;
+        color: rgb(0, 0, 0); /* Color del texto de los enlaces */
+        font-weight: bold;
+        padding: 10px 15px;
+    }
+    
+    .yy-menu-parent {
+        position: relative;
+        cursor: pointer; /* Cambia el cursor para indicar que es desplegable */
+    }
+    
+    .yy-menu-parent::after {
+        content: "";
+        border: solid rgb(19, 19, 19);
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin-left: 10px;
+        position: absolute;
+        right: 0; /* Alinea la flecha hacia la derecha */
+        top: 50%; /* Alinea la flecha verticalmente */
+        transform: translateY(-50%) rotate(45deg); /* Centra y rota la flecha */
+    }
+    
+    .yy-menu-list > .yy-menu-parent:hover .yy-sub-menu {
+        display: block; /* Muestra el menú desplegable al pasar el mouse */
+    }
+    
+    .yy-sub-menu {
+        display: none; /* Oculta el menú desplegable por defecto */
+        position: absolute;
+        background-color: #fdfdfd; /* Color de fondo del menú desplegable */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para el menú desplegable */
+        padding: 12px 16px; /* Espaciado dentro del menú desplegable */
+        z-index: 200; /* Incrementa el z-index para asegurar que esté por encima de otros elementos */
+        margin-top: .5em; /* Espacio para la sombra */
+    }
+    
 
-        /* footer */
-        .con {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    /* footer */
+    .con {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .site-footer {
+        background-color: rgb(67, 152, 180);
+        color: #141313;
+        padding: 20px 0;
+        margin-top: 7rem;
+    }
+    
+    .footer-sections-container {
+        display: flex;
+        justify-content: space-between; /* Cambiado de 'space-around' para un mejor control del espacio */
+        flex-wrap: wrap;
+    }
+    
+    .footer-secti {
+        flex-basis: 20%; /* Cambiado de 'flex: 1' para tener un mejor control sobre el ancho */
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        font-size: 12px;
+    }
+    
+    
+    
+    .footer-link a {
+        color: #0d0d0d;
+        text-decoration: none;
+        margin-left: -40px;
+        font-size: 1.3rem;
+    }
+    
+    .social-icons {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .social-icons li {
+        margin: 0 10px;
         
-        .site-footer {
-            background-color: rgb(67, 152, 180);
-            color: #fff;
-            padding: 20px 0;
-        }
+    }
+    
+    .footer-second-s {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .social-li {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
         
-        .footer-sections-container {
-            display: flex;
-            justify-content: space-between; /* Cambiado de 'space-around' para un mejor control del espacio */
-            flex-wrap: wrap;
-        }
-        
-        .footer-secti {
-            flex-basis: 20%; /* Cambiado de 'flex: 1' para tener un mejor control sobre el ancho */
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            font-size: 12px;
-        }
-        
-        
-        
-        .footer-link a {
-            color: #fff;
-            text-decoration: none;
-            margin-left: -40px;
-            font-size: 1.3rem;
-        }
-        
-        .social-icons {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .social-icons li {
-            margin: 0 10px;
-        }
-        
-        .footer-second-s {
-            text-align: center;
-            margin-top: 20px;
-        }
-        
-        .social-li {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .social-li li {
-            margin: 0 10px;
-            position: relative;
-        }
-        
-        .social-li li a {
-            position: relative;
-            z-index: 1; /* Poner sobre la línea */
-        }
-        
-        .footer-line {
-            width: 80%;
-            height: 1px;
-            background-color: #73a5c1; /* Color de la línea */
-            margin-top: 20px;
-            margin-left: auto; /* Margen automático a la izquierda */
-            margin-right: auto; /* Margen automático a la derecha */
-        }
-        
-        
-        .p {
-            text-align: center;
-            font-size: 10px;
-            color: #fff;
-            margin-top: 10px;
-        }
-        
-        .footer-bo input[type="email"],
-        .footer-bo textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #fff; /* Background color for the input fields */
-            border: 1px solid #f1f5f6;
-            border-radius: 5px;
-            box-sizing: border-box;
-            color: #0d0c0c; 
-            resize: none !important;
-        }
-        
-        
-        .footer-bo button {
-            width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
-            background-color: #f7fbf8;
-            color: rgb(7, 7, 7);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        
-        .footer-bo button:hover {
-            background-color: #14c46c;
-        }
-        
-        .footer-link {
-            margin-top: 1rem;
-        }
-        
-        .footer-secti {
-            margin-bottom: 10px;
-        }
-        
-        .quick-contact input,
-        .quick-contact textarea {
-            margin-bottom: 15px; /* Ajustado para uniformidad */
-        }
-        {% comment %} ...... {% endcomment %}
-        .quick-contact {
-            background-color: rgb(67, 152, 180); /* El color de fondo que combina con el pie de página */
-            padding: 20px;
-            border-radius: 8px; /* Bordes redondeados para el formulario */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
-            width: 100%; /* Ajusta el ancho según sea necesario */
-            box-sizing: border-box;
-        }
-        
-        .quick-contact h2 {
-            color: #fff; /* Título del formulario en color blanco */
-            margin-bottom: 16px; /* Espacio entre el título y el campo de email */
-        }
-        
-        .quick-contact input[type="email"],
-        .quick-contact textarea {
-            width: calc(100% - 20px); /* Se calcula el 100% menos el padding */
-            padding: 10px;
-            margin-bottom: 16px; /* Espacio entre los campos de texto */
-            border: 1px solid #556d6d; 
-            background-color: #ebebeb; 
-            color: black;
-            border-radius: 5px; 
-            resize: none !important;
-        }
-        
-        
-        .quick-contact input[type="email"]:focus,
-        .quick-contact textarea:focus {
-            outline: none; /* Elimina el contorno al enfocar */
-            border: 2px solid #a39999; /* Cambia el color del borde al enfocar */
-        }
-        
-        .quick-contact button {
-            width: 100%; /* Ajusta el botón para que se expanda al 100% del formulario */
-            padding: 10px 0; /* Padding superior e inferior para el botón */
-            border: none; /* Elimina el borde del botón */
-            background-color: #0d0c0c; /* Color de fondo del botón */
-            color: #fff; /* Texto del botón en color blanco */
-            border-radius: 4px; /* Bordes redondeados para el botón */
-            cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
-            transition: background-color 0.3s; /* Transición suave para el color de fondo */
-        }
-        
-        .quick-contact button:hover {
-            background-color: #a568a7; /* Cambia el color de fondo al pasar el cursor */
-        }
-        .social-li a {
-            font-size: 24px; /* Tamaño del icono */
-            color: white; /* Color del icono */
-            transition: color 0.3s ease; /* Transición suave para el efecto hover */
-        }
-        
-        .social-li a:hover {
-            color: black; /* Cambia el color al hacer hover */
-            /* Puedes agregar otros estilos que desees para el hover aquí */
-        }
-        .in-title {
-            font-weight: bold; /* Hace el texto en negrita */
-            text-transform: uppercase; /* Convierte el texto a mayúsculas */
-            margin-bottom: 16px; /* Agrega espacio debajo del título */
-            font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
-        }
-        
-        .in-content {
-            text-align: justify; /* Justifica el contenido */
-            margin-top: 16px; /* Agrega espacio arriba del contenido para separarlo del título */
-        }
-        .contact-title {
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 20px; /* Espacio debajo del título */
-            font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
-            color: #fff; /* Color del texto */
-        }
-        
-        .contact-description {
-            text-align: justify;
-            margin-bottom: 20px; 
-        }
-        
-        .contact-details {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            margin-top: 2rem
-        }
-        
-        .contact-details li {
-            display: flex;
-            align-items: center; /* Alinea los íconos con el texto */
-            margin-bottom: -1px; /* Espacio entre cada elemento de contacto */
-        }
-        
-        .contact-icon {
-            /* Ajusta el tamaño y el color de tus íconos aquí si es necesario */
-            margin-right: 6px; /* Espacio entre el ícono y el texto */
-            font-size: 16px; /* Tamaño del ícono */
-        }
-        
-        .contact-text {
-            color: #d9dee3;
-            font-weight: bold;
-        }
-        .contact-icon i {
-            margin-right: 10px; /* Espacio entre el ícono y el texto */
-            color: #fff; /* O el color que prefieras para tus iconos */
-            /* Otros estilos que quieras aplicar a los iconos */
-        }
+    }
+    
+    .social-li li {
+        margin: 0 10px;
+        position: relative;
+    }
+    
+    .social-li li a {
+        position: relative;
+        z-index: 1; /* Poner sobre la línea */
+    }
+    
+    .footer-line {
+        width: 80%;
+        height: 1px;
+        background-color: #73a5c1; /* Color de la línea */
+        margin-top: 20px;
+        margin-left: auto; /* Margen automático a la izquierda */
+        margin-right: auto; /* Margen automático a la derecha */
+    }
+    
+    
+    .p {
+        text-align: center;
+        font-size: 10px;
+        color: #0b0b0b;
+        margin-top: 10px;
+    }
+    
+    .footer-bo input[type="email"],
+    .footer-bo textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #fff; /* Background color for the input fields */
+        border: 1px solid #f1f5f6;
+        border-radius: 5px;
+        box-sizing: border-box;
+        color: #0d0c0c; 
+        resize: none !important;
+    }
+    
+    
+    .footer-bo button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho del contenedor */
+        background-color: #f7fafb;
+        color: rgb(7, 7, 7);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .footer-bo button:hover {
+        background-color: #14c46c;
+    }
+    
+    .footer-link {
+        margin-top: 1rem;
+        margin-left: 50px;
+    }
+    
+    .footer-secti {
+        margin-bottom: 10px;
+    }
+    
+    .quick-contact input,
+    .quick-contact textarea {
+        margin-bottom: 15px; /* Ajustado para uniformidad */
+    }
+    
+    .quick-contact {
+        background-color: rgb(67, 152, 180); /* El color de fondo que combina con el pie de página */
+        padding: 20px;
+        border-radius: 8px; /* Bordes redondeados para el formulario */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+        width: 100%; /* Ajusta el ancho según sea necesario */
+        box-sizing: border-box;
+    }
+    
+    .quick-contact h2 {
+        color: #fff; /* Título del formulario en color blanco */
+        margin-bottom: 16px; /* Espacio entre el título y el campo de email */
+    }
+    
+    .quick-contact input[type="email"],
+    .quick-contact textarea {
+        width: calc(100% - 20px); /* Se calcula el 100% menos el padding */
+        padding: 10px;
+        margin-bottom: 16px; /* Espacio entre los campos de texto */
+        border: 1px solid #556d6d; 
+        background-color: #ebebeb; 
+        color: black;
+        border-radius: 5px; 
+        resize: none !important;
+    }
+    
+    
+    .quick-contact input[type="email"]:focus,
+    .quick-contact textarea:focus {
+        outline: none; /* Elimina el contorno al enfocar */
+        border: 2px solid #a39999; /* Cambia el color del borde al enfocar */
+    }
+    
+    .quick-contact button {
+        width: 100%; /* Ajusta el botón para que se expanda al 100% del formulario */
+        padding: 10px 0; /* Padding superior e inferior para el botón */
+        border: none; /* Elimina el borde del botón */
+        background-color: #0d0c0c; /* Color de fondo del botón */
+        color: #fff; /* Texto del botón en color blanco */
+        border-radius: 4px; /* Bordes redondeados para el botón */
+        cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
+        transition: background-color 0.3s; /* Transición suave para el color de fondo */
+    }
+    
+    .quick-contact button:hover {
+        background-color: #a568a7; /* Cambia el color de fondo al pasar el cursor */
+    }
+    .social-li a {
+        font-size: 24px; /* Tamaño del icono */
+        color: white; /* Color del icono */
+        transition: color 0.3s ease; /* Transición suave para el efecto hover */
+    }
+    
+    .social-li a:hover {
+        color: black; /* Cambia el color al hacer hover */
+        /* Puedes agregar otros estilos que desees para el hover aquí */
+    }
+    .in-title {
+        font-weight: bold; /* Hace el texto en negrita */
+        text-transform: uppercase; /* Convierte el texto a mayúsculas */
+        margin-bottom: 16px; /* Agrega espacio debajo del título */
+        font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+    }
+    
+    .in-content {
+        text-align: justify; /* Justifica el contenido */
+        margin-top: 16px; /* Agrega espacio arriba del contenido para separarlo del título */
+    }
+    .contact-title {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px; /* Espacio debajo del título */
+        font-size: 18px; /* Ajusta el tamaño del texto según sea necesario */
+        color: #fff; /* Color del texto */
+    }
+    
+    .contact-description {
+        text-align: justify;
+        margin-bottom: 20px; 
+    }
+    
+    .contact-details {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 2rem
+    }
+    
+    .contact-details li {
+        display: flex;
+        align-items: center; /* Alinea los íconos con el texto */
+        margin-bottom: -1px; /* Espacio entre cada elemento de contacto */
+    }
+    
+    .contact-icon {
+        /* Ajusta el tamaño y el color de tus íconos aquí si es necesario */
+        margin-right: 6px; /* Espacio entre el ícono y el texto */
+        font-size: 16px; /* Tamaño del ícono */
+    }
+    
+    .contact-text {
+        color: #d9dee3;
+        font-weight: bold;
+    }
+    .contact-icon i {
+        margin-right: 10px; /* Espacio entre el ícono y el texto */
+        color: #fff; /* O el color que prefieras para tus iconos */
+        /* Otros estilos que quieras aplicar a los iconos */
+    }
 
 
 
-        ]
-        .footer-secti {
-            flex: 1;
-            padding: 20px;
-            margin-right: 20px; 
-        }
-        
+    
+    .footer-secti {
+        flex: 1;
+        padding: 20px;
+        margin-right: 20px; 
+    }
+    
+   
+    
+    .footer-sections-container {
+        display: flex;
+        justify-content: flex-start; /* O utiliza 'center' si prefieres centrar todo el contenido en el contenedor */
+        flex-wrap: wrap;
+    }
+    
+    .footer-secti {
+        margin-right: 15px;
+        margin-left: 15px; 
        
-        {% comment %} xd {% endcomment %}
-        .footer-sections-container {
-            display: flex;
-            justify-content: flex-start; /* O utiliza 'center' si prefieres centrar todo el contenido en el contenedor */
-            flex-wrap: wrap;
-        }
-        
-        .footer-secti {
-            margin-right: 15px;
-            margin-left: 15px; 
-           
-        }
-        
-        /* Si deseas asegurarte de que el último elemento no tenga un margen a la derecha */
-        .footer-secti:last-child {
-            margin-right: 0;
-        }
-        
-    </style>
+    }
+    
+    /* Si deseas asegurarte de que el último elemento no tenga un margen a la derecha */
+    .footer-secti:last-child {
+        margin-right: 0;
+    }
+    
+</style>
       </head>
 
       <body>
